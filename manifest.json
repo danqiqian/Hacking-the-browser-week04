@@ -1,0 +1,26 @@
+﻿{
+  "name": "obfuscation",
+  "manifest_version": 2,
+  "version": "0.1",
+
+  "browser_action": {
+    "default_title": "hello,world",
+    "default_popup": "sketch/index.html"
+  },
+
+  "content_scripts": [
+  {
+    "matches": ["<all_urls>"],
+    "js": ["content_script.js"]
+  }
+  ],
+
+  "permissions": ["tabs"],
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+
+  }
+
+}
